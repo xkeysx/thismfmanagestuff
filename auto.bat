@@ -9,7 +9,7 @@ set temp="_"
 set t1="notepad"
 set t2="notepad"
 
-set /a a=0
+set /a a=%time:~0,2%
 set /a b=%a%+0 
 set /a c=%b%+0 
 set /a d=%c%+0
