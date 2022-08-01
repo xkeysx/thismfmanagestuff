@@ -6,17 +6,18 @@ set min=%time:~3,2%
 
 set temp="_"
 
-set t1="notepad"
-set t2="notepad"
+set t1="notepd"
+set t2="notepd"
 
-set /a a=%time:~0,2%
+set /a a=4 :: start time
+echo intervals
 set /a b=%a%+0 
 set /a c=%b%+0 
-set /a d=%c%+0
+set /a d=%c%+0 
 
 set /a q=%d%-1
-set /a "u=%d%-24"
-set /a p=%u%-1
+set /a "u=%d%-24" 
+set /a p=%u%-1 
 
 set /a e=%d%+0
 
@@ -36,13 +37,16 @@ netsh wlan connect ::bssid
 
 del %temp% /f /q
 rmdir %temp% /s /q 
+cd %cd%\drudgery\walls
 
 if not DEFINED IS_MINIMIZED set IS_MINIMIZED=1 && start "BO darbi" /min "%~f0" %* && exit
 
 if %hour% equ %d% (
     if %min% equ 00 (
         timeout /t 3
-        taskkill /f /fi "STATUS eq running"        
+        taskkill /f /fi "STATUS eq running"       
+        cd ..
+        push 
     ) else (
         goto END1
     )
@@ -53,7 +57,9 @@ if %hour% equ %d% (
 if %hour% equ %u% (
     if %min% equ 00 (
         timeout /t 3
-        taskkill /f /fi "STATUS eq running"   
+        taskkill /f /fi "STATUS eq running" 
+        cd ..
+        push  
     ) else (
         goto END2   
     )
@@ -101,6 +107,8 @@ if %hour% GEQ %p% (
 if %hour% GEQ %c% (
     if %hour% LSS %d% (
         powershell -command "& .\A.ps1
+        cd ..
+        push
         exit
     ) ELSE (
         goto c
@@ -113,6 +121,8 @@ if %hour% GEQ %c% (
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
         powershell -command "& .\D.ps1
+        cd ..
+        push
         exit
     ) ELSE (
         goto o
@@ -125,6 +135,8 @@ if %hour% GEQ %b% (
 if %hour% GEQ %a% (
     if %hour% LSS %b% (
         powershell -command "& .\A.ps1
+        cd ..
+        push
         exit
     ) ELSE (
         goto f
