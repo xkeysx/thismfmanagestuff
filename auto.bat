@@ -1,19 +1,13 @@
 @ECHO ON
-cd %cd%\drudgery
+cd %cd%\eve
 
 set hour=%time:~0,2%
 set min=%time:~3,2%
 
-set temp="_"
-
-set t1="notepd"
-set t2="notepd"
-
-set /a a=4 :: start time
-echo intervals
-set /a b=%a%+0 
-set /a c=%b%+0 
-set /a d=%c%+0 
+set /a a=7
+set /a b=%a%+4 
+set /a c=%b%+5 
+set /a d=%c%+6 
 
 set /a q=%d%-1
 set /a "u=%d%-24" 
@@ -33,16 +27,20 @@ schtasks /create /sc DAILY /tn s3 /tr "%cd%\auto.bat" /st %c%:00:00 /f
 schtasks /create /sc DAILY /tn s2 /tr "%cd%\auto.bat" /st 0%c%:00:00 /f
 
 netsh wlan show networks
-netsh wlan connect ::bssid
+netsh wlan connect Starlink
 
-del %temp% /f /q
-rmdir %temp% /s /q 
-cd %cd%\drudgery\walls
+del C:\Users\Silver\AppData\Local\Temp /f /q
+rmdir C:\Users\Silver\AppData\Local\Temp /s /q 
+cd %cd%\eve\walls
 
+goto ok
 if not DEFINED IS_MINIMIZED set IS_MINIMIZED=1 && start "BO darbi" /min "%~f0" %* && exit
+:ok
 
 if %hour% equ %d% (
     if %min% equ 00 (
+        cd walls
+        powershell -command "& .\E.ps1
         timeout /t 3
         taskkill /f /fi "STATUS eq running"       
         cd ..
@@ -56,6 +54,8 @@ if %hour% equ %d% (
 :END1
 if %hour% equ %u% (
     if %min% equ 00 (
+        cd walls
+        powershell -command "& .\E.ps1
         timeout /t 3
         taskkill /f /fi "STATUS eq running" 
         cd ..
@@ -80,7 +80,8 @@ if %d% geq 24 (
 :alt1
 if %hour% GEQ %q% (
     if %hour% LSS %d% ( 
-        powershell -command "& .\S.ps1
+        cd walls
+        powershell -command "& .\D.ps1
         schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st 0%d%:00:00 /f 
         schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st %d%:00:00 /f                              
     ) ELSE (
@@ -93,7 +94,8 @@ if %hour% GEQ %q% (
 :alt2
 if %hour% GEQ %p% (
     if %hour% LSS %u% (
-        powershell -command "& .\S.ps1
+        cd walls
+        powershell -command "& .\D.ps1
         schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st 0%u%:00:00 /f 
         schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st %u%:00:00 /f                                   
     ) ELSE (
@@ -106,7 +108,8 @@ if %hour% GEQ %p% (
 :b
 if %hour% GEQ %c% (
     if %hour% LSS %d% (
-        powershell -command "& .\A.ps1
+        cd walls
+        powershell -command "& .\C.ps1
         cd ..
         push
         exit
@@ -120,7 +123,8 @@ if %hour% GEQ %c% (
 :c
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
-        powershell -command "& .\D.ps1
+        cd walls
+        powershell -command "& .\B.ps1
         cd ..
         push
         exit
@@ -133,7 +137,8 @@ if %hour% GEQ %b% (
 
 :o
 if %hour% GEQ %a% (
-    if %hour% LSS %b% (
+    if %hour% LSS %b% ( 
+        cd walls
         powershell -command "& .\A.ps1
         cd ..
         push

@@ -1,4 +1,4 @@
-$K="C:\Users\Silver\Desktop\drudgery\walls\d.webp"
+$K="C:\Users\Silver\eve\walls\d.webp"
 $code = @' 
 using System.Runtime.InteropServices; 
 namespace Win32{ 
