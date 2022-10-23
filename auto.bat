@@ -5,13 +5,13 @@ set hour=%time:~0,2%
 set min=%time:~3,2%
 
 set /a a=7
-set /a b=%a%+4 
-set /a c=%b%+5 
-set /a d=%c%+6 
+set /a b=%a%+0 
+set /a c=%b%+0 
+set /a d=%c%+15 
 
-set /a q=%d%-1
+set /a q=%d%-2
 set /a "u=%d%-24" 
-set /a p=%u%-1 
+set /a p=%u%-2 
 
 set /a e=%d%+0
 
