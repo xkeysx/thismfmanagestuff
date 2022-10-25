@@ -5,9 +5,9 @@ set hour=%time:~0,2%
 set min=%time:~3,2%
 
 set /a a=13
-set /a b=%a%+0 
-set /a c=%b%+0 
-set /a d=%c%+9 
+set /a b=%a%+6 
+set /a c=%b%+100
+set /a d=%c%+100
 
 set /a q=%d%-6
 set /a "u=%d%-24" 
@@ -23,9 +23,11 @@ schtasks /create /sc DAILY /tn s1 /tr "%cd%\auto.bat" /st %a%:00:00 /f
 schtasks /create /sc DAILY /tn s1 /tr "%cd%\auto.bat" /st 0%a%:00:00 /f
 schtasks /create /sc DAILY /tn s2 /tr "%cd%\auto.bat" /st %b%:00:00 /f
 schtasks /create /sc DAILY /tn s2 /tr "%cd%\auto.bat" /st 0%b%:00:00 /f
+goto :fg
 schtasks /create /sc DAILY /tn s3 /tr "%cd%\auto.bat" /st %c%:00:00 /f
 schtasks /create /sc DAILY /tn s2 /tr "%cd%\auto.bat" /st 0%c%:00:00 /f
 
+:fg
 netsh wlan show networks
 netsh wlan connect Starlink
 
