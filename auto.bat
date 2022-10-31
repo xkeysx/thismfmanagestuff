@@ -43,7 +43,7 @@ taskkill /im onedrive.exe /f /t
 if %hour% equ %d% (
     if %min% equ 00 (
         cd walls
-        powershell -command "& .\E.ps1
+        ECHO E.ps1
         timeout /t 3
         taskkill /f /fi "STATUS eq running"       
         cd ..
@@ -58,7 +58,7 @@ if %hour% equ %d% (
 if %hour% equ %u% (
     if %min% equ 00 (
         cd walls
-        powershell -command "& .\E.ps1
+        ECHO E.ps1
         timeout /t 3
         taskkill /f /fi "STATUS eq running" 
         cd ..
@@ -84,7 +84,7 @@ if %d% geq 24 (
 if %hour% GEQ %q% (
     if %hour% LSS %d% ( 
         cd walls
-        powershell -command "& .\D.ps1
+        ECHO D.ps1
         schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st 0%d%:00:00 /f 
         schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st %d%:00:00 /f                              
     ) ELSE (
@@ -98,7 +98,7 @@ if %hour% GEQ %q% (
 if %hour% GEQ %p% (
     if %hour% LSS %u% (
         cd walls
-        powershell -command "& .\D.ps1
+        ECHO D.ps1
         schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st 0%u%:00:00 /f 
         schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st %u%:00:00 /f                                   
     ) ELSE (
@@ -112,7 +112,7 @@ if %hour% GEQ %p% (
 if %hour% GEQ %c% (
     if %hour% LSS %d% (
         cd walls
-        powershell -command "& .\C.ps1
+        ECHO C.ps1
         cd ..
         push
         exit
@@ -126,8 +126,9 @@ if %hour% GEQ %c% (
 :c
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
+        Echo RTFM
         cd walls
-        powershell -command "& .\B.ps1
+        ECHO B.ps1
         cd ..
         push
         exit
@@ -141,8 +142,9 @@ if %hour% GEQ %b% (
 :o
 if %hour% GEQ %a% (
     if %hour% LSS %b% ( 
+        ECHO Queued exercise sub stuff
         cd walls
-        powershell -command "& .\A.ps1
+        ECHO A.ps1
         cd ..
         push
         exit
