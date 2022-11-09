@@ -4,9 +4,9 @@ cd %cd%\eve
 set hour=%time:~0,2%
 set min=%time:~3,2%
 
-set /a a=7
+set /a a=4
 set /a b=%a%+6 
-set /a c=%b%+3
+set /a c=%b%+6
 set /a d=%c%+6
 
 set /a q=%d%-2
@@ -85,6 +85,7 @@ if %hour% GEQ %q% (
     if %hour% LSS %d% ( 
         cd walls
         ECHO D.ps1
+        start firefox https://www.blogger.com/blog/posts/2034391115397402342
         schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st 0%d%:00:00 /f 
         schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st %d%:00:00 /f                              
     ) ELSE (
@@ -99,6 +100,7 @@ if %hour% GEQ %p% (
     if %hour% LSS %u% (
         cd walls
         ECHO D.ps1
+        start firefox https://www.blogger.com/blog/posts/2034391115397402342
         schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st 0%u%:00:00 /f 
         schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st %u%:00:00 /f                                   
     ) ELSE (
@@ -146,6 +148,7 @@ if %hour% GEQ %a% (
         cd walls
         ECHO A.ps1
         cd ..
+        C:\Users\Silver\EVE\bot\eve.py
         push
         exit
     ) ELSE (
