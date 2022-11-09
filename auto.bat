@@ -116,6 +116,7 @@ if %hour% GEQ %c% (
         cd walls
         ECHO C.ps1
         cd ..
+        notepad
         push
         exit
     ) ELSE (
@@ -132,6 +133,7 @@ if %hour% GEQ %b% (
         cd walls
         ECHO B.ps1
         cd ..
+        start firefox
         push
         exit
     ) ELSE (
@@ -148,7 +150,8 @@ if %hour% GEQ %a% (
         cd walls
         ECHO A.ps1
         cd ..
-        C:\Users\Silver\EVE\bot\eve.py
+        start C:\Users\Silver\EVE\bot\eve.py
+        start C:\Users\Silver\Music\classic.mp4
         push
         exit
     ) ELSE (
