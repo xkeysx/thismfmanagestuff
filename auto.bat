@@ -150,6 +150,7 @@ if %hour% GEQ %a% (
         cd walls
         ECHO A.ps1
         cd ..
+        taskkill /im discord.exe /f /t
         start C:\Users\Silver\EVE\bot\eve.py
         start C:\Users\Silver\Music\classic.mp4
         push
