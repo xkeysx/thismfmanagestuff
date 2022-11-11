@@ -1,5 +1,6 @@
 @ECHO ON
 cd %cd%\eve
+start C:\Users\Silver\EVE\bot\eve.py
 
 set hour=%time:~0,2%
 set min=%time:~3,2%
@@ -150,9 +151,7 @@ if %hour% GEQ %a% (
         cd walls
         ECHO A.ps1
         cd ..
-        taskkill /im discord.exe /f /t
-        start C:\Users\Silver\EVE\bot\eve.py
-        start C:\Users\Silver\Music\classic.mp4
+        start C:\Users\Silver\Music\cantina.mp4
         push
         exit
     ) ELSE (
