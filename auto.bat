@@ -1,6 +1,5 @@
 @ECHO ON
-cd %cd%\eve
-start C:\Users\Silver\EVE\bot\eve.py
+start C:\Users\Silver\EVE\bot
 
 set hour=%time:~0,2%
 set min=%time:~3,2%
@@ -20,18 +19,18 @@ schtasks /delete /tn s1 /f
 schtasks /delete /tn s2 /f
 schtasks /delete /tn s3 /f
 schtasks /delete /tn s4 /f  
-schtasks /create /sc DAILY /tn s1 /tr "%cd%\auto.bat" /st %a%:00:00 /f
-schtasks /create /sc DAILY /tn s1 /tr "%cd%\auto.bat" /st 0%a%:00:00 /f
-schtasks /create /sc DAILY /tn s2 /tr "%cd%\auto.bat" /st %b%:00:00 /f
-schtasks /create /sc DAILY /tn s2 /tr "%cd%\auto.bat" /st 0%b%:00:00 /f
-schtasks /create /sc DAILY /tn s3 /tr "%cd%\auto.bat" /st %c%:00:00 /f
-schtasks /create /sc DAILY /tn s2 /tr "%cd%\auto.bat" /st 0%c%:00:00 /f
+schtasks /create /sc DAILY /tn s1 /tr "C:\Users\Silver\EVE\auto.bat" /st %a%:00:00 /f
+schtasks /create /sc DAILY /tn s1 /tr "C:\Users\Silver\EVE\auto.bat" /st 0%a%:00:00 /f
+schtasks /create /sc DAILY /tn s2 /tr "C:\Users\Silver\EVE\auto.bat" /st %b%:00:00 /f
+schtasks /create /sc DAILY /tn s2 /tr "C:\Users\Silver\EVE\auto.bat" /st 0%b%:00:00 /f
+schtasks /create /sc DAILY /tn s3 /tr "C:\Users\Silver\EVE\auto.bat" /st %c%:00:00 /f
+schtasks /create /sc DAILY /tn s2 /tr "C:\Users\Silver\EVE\auto.bat" /st 0%c%:00:00 /f
 
 netsh wlan show networks
 netsh wlan connect Starlink
 
-del C:\Users\Silver\AppData\Local\Temp /f /q
-rmdir C:\Users\Silver\AppData\Local\Temp /s /q 
+del C:\Users\pc14\AppData\Local\Temp /f /q
+rmdir C:\Users\pc14\AppData\Local\Temp /s /q 
 cd %cd%\eve\walls
 
 goto ok
@@ -72,12 +71,12 @@ if %hour% equ %u% (
 )
 :END2
 if %d% geq 24 (
-    schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st 0%p%:00:00 /f
-    schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st %p%:00:00 /f
+    schtasks /create /sc DAILY /tn s4 /tr "C:\Users\Silver\EVE\auto.bat" /st 0%p%:00:00 /f
+    schtasks /create /sc DAILY /tn s4 /tr "C:\Users\Silver\EVE\auto.bat" /st %p%:00:00 /f
     goto alt2
 ) else (
-    schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st 0%q%:00:00 /f 
-    schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st %q%:00:00 /f
+    schtasks /create /sc DAILY /tn s4 /tr "C:\Users\Silver\EVE\auto.bat" /st 0%q%:00:00 /f 
+    schtasks /create /sc DAILY /tn s4 /tr "C:\Users\Silver\EVE\auto.bat" /st %q%:00:00 /f
     goto alt1
 )
 
@@ -87,8 +86,8 @@ if %hour% GEQ %q% (
         cd walls
         ECHO D.ps1
         start firefox https://www.blogger.com/blog/posts/2034391115397402342
-        schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st 0%d%:00:00 /f 
-        schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st %d%:00:00 /f                              
+        schtasks /create /sc DAILY /tn s4 /tr "C:\Users\Silver\EVE\auto.bat" /st 0%d%:00:00 /f 
+        schtasks /create /sc DAILY /tn s4 /tr "C:\Users\Silver\EVE\auto.bat" /st %d%:00:00 /f                              
     ) ELSE (
         goto b
     )
@@ -102,8 +101,8 @@ if %hour% GEQ %p% (
         cd walls
         ECHO D.ps1
         start firefox https://www.blogger.com/blog/posts/2034391115397402342
-        schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st 0%u%:00:00 /f 
-        schtasks /create /sc DAILY /tn s4 /tr "%cd%\auto.bat" /st %u%:00:00 /f                                   
+        schtasks /create /sc DAILY /tn s4 /tr "C:\Users\Silver\EVE\auto.bat" /st 0%u%:00:00 /f 
+        schtasks /create /sc DAILY /tn s4 /tr "C:\Users\Silver\EVE\auto.bat" /st %u%:00:00 /f                                   
     ) ELSE (
         goto b
     )
@@ -151,7 +150,7 @@ if %hour% GEQ %a% (
         cd walls
         ECHO A.ps1
         cd ..
-        start C:\Users\Silver\Music\cantina.mp4
+        start C:\Users\pc14\Music\cantina.mp4
         push
         exit
     ) ELSE (
