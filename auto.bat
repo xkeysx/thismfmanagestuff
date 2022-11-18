@@ -4,14 +4,14 @@ start C:\Users\Silver\EVE\bot
 set hour=%time:~0,2%
 set min=%time:~3,2%
 
-set /a a=4
-set /a b=%a%+6 
-set /a c=%b%+6
-set /a d=%c%+6
+set /a a=0
+set /a b=%a%+0
+set /a c=%b%+0
+set /a d=%c%+0
 
-set /a q=%d%-2
+set /a q=%d%-0
 set /a "u=%d%-24" 
-set /a p=%u%-2 
+set /a p=%u%-0 
 
 set /a e=%d%+0
 
@@ -129,7 +129,6 @@ if %hour% GEQ %c% (
 :c
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
-        Echo RTFM
         cd walls
         ECHO B.ps1
         cd ..
@@ -146,11 +145,8 @@ if %hour% GEQ %b% (
 :o
 if %hour% GEQ %a% (
     if %hour% LSS %b% ( 
-        ECHO Queued exercise sub stuff
         cd walls
         ECHO A.ps1
-        cd ..
-        start C:\Users\pc14\Music\cantina.mp4
         push
         exit
     ) ELSE (
