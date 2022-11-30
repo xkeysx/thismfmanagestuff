@@ -1,2 +1,1 @@
-We need this shit, if we're out of mind ~ pc oriented
-so that this program can take care of you...
+Eve the automation program 
