@@ -1,5 +1,5 @@
 @ECHO ON
-start G:\My Drive\Absolute pvt ltd\EVE\bot\eve.py
+start "G:\My Drive\Absolute pvt ltd\EVE\bot\eve.py"
 
 set hour=%time:~0,2%
 set min=%time:~3,2%
