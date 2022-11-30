@@ -37,9 +37,6 @@ goto ok
 if not DEFINED IS_MINIMIZED set IS_MINIMIZED=1 && start "BO darbi" /min "%~f0" %* && exit
 :ok
 
-taskkill /im GoogleDriveFS.exe /f /t
-taskkill /im onedrive.exe /f /t
-
 if %hour% equ %d% (
     if %min% equ 00 (
         cd walls
