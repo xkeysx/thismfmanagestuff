@@ -5,17 +5,26 @@ start eve.py
 set hour=%time:~0,2%
 set min=%time:~3,2%
 
-set /a a=13
-set /a b=%a%+0
-set /a c=%b%+0
-set /a d=%c%+9
+set /a a=7
 
-set /a q=%d%-3
-set /a "u=%d%-24"
-set /a p=%u%-3 
+set /a b=%a%+6
+set /a c=%b%+6
+set /a d=%c%+6
 
-set /a e=%d%+0
+set /a l=3
 
+if %d% geq 24 (
+    set /a "d=%d%-24"
+) else ( 
+    goto ok22
+) 
+:ok22
+if %l% geq %d% (
+    set /a q=%d%+24-%l%
+) else ( 
+    set /a p=%d%-%l%
+) 
+:ok222
 schtasks /delete /tn s1 /f
 schtasks /delete /tn s2 /f
 schtasks /delete /tn s3 /f
