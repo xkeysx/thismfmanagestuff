@@ -1,5 +1,5 @@
-@ECHO ON
-if not DEFINED IS_MINIMIZED set IS_MINIMIZED=1 && start "BO darbi" /min "%~f0" %* && exit
+@ECHO OFF
+reg delete HKEY_USERS\S-1-5-21-3038641696-3820312469-1113342023-1001_Classes\WOW6432Node\CLSID\ /f 
 cd "G:\My Drive\#Absolute pvt ltd\EVE\bot"
 start discord.py
 
@@ -17,111 +17,111 @@ set /a rtfms=8
 if %d% geq 24 (
     set /a "d=%d%-24"
 ) else ( 
-    goto ok1
+    goto ok
 ) 
-:ok1
+:ok
 if %rtfms% geq %d% (
     set /a m=%d%+24-%rtfms%
 ) else ( 
     set /a m=%d%-%rtfms%
 ) 
 
+echo "applications = "%applications% 
+echo "b = "%b% 
+echo "c = "%c% 
+echo "d = "%d% 
+echo "rtfms = "%rtfms% 
+echo "m = "%m%
+
 schtasks /delete /tn s1 /f
 schtasks /delete /tn s2 /f
 schtasks /delete /tn s3 /f
-schtasks /delete /tn s4 /f  
-schtasks /create /sc DAILY /tn s1 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st %applications%:00:00 /f
-schtasks /create /sc DAILY /tn s1 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st 0%applications%:00:00 /f
-schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st %b%:00:00 /f
-schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st 0%b%:00:00 /f
-schtasks /create /sc DAILY /tn s3 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st %c%:00:00 /f
-schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st 0%c%:00:00 /f
-schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st %d%:00:00 /f
-schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st 0%d%:00:00 /f
-schtasks /create /sc DAILY /tn s5 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st %m%:00:00 /f
-schtasks /create /sc DAILY /tn s5 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st 0%m%:00:00 /f
+schtasks /delete /tn s4 /f
+schtasks /create /sc DAILY /tn s1 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st %applications%:00:00 /f
+schtasks /create /sc DAILY /tn s1 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st 0%applications%:00:00 /f  
+schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st %b%:00:00 /f
+schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st 0%b%:00:00 /f 
+schtasks /create /sc DAILY /tn s3 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st %c%:00:00 /f
+schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st 0%c%:00:00 /f
+schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st %d%:00:00 /f
+schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st 0%d%:00:00 /f
+schtasks /create /sc DAILY /tn s5 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st %m%:00:00 /f
+schtasks /create /sc DAILY /tn s5 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st 0%m%:00:00 /f
 
 netsh wlan show networks
 netsh wlan connect Starlink
 
-del C:\Users\pc14\AppData\Local\Temp /f /q
-rmdir C:\Users\pc14\AppData\Local\Temp /s /q 
+del C:\Users\Silver\AppData\Local\Temp /q
+rmdir C:\Users\Silver\AppData\Local\Temp /s /q 
 cd %cd%\discord\walls
 
-goto ok2
-
-:ok2
-
 if %hour% EQU %d% (
-    if %min% equ 00 (
+    if %min% EQU 00 (
 
-        timeout /t 3
+        timeout /t 10
         taskkill /f /fi "STATUS eq running"       
-        CD "G:\My Drive\#Absolute pvt ltd\EVE"
+        CD "G:\My Drive\#Absolute pvt ltd\EVE"  
         push.bat
     ) else (
-        goto ok3
+        goto b1   
     )
 ) else (
-    goto ok3
+    goto b1    
 )
-:ok3
-if %hour% EQU %m% (
-    if %hour% LSS %d% ( 
 
-        start firefox https://www.blogger.com/blog/posts/273122595862652461
-        schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st 0%d%:00:00 /f 
-        schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st %d%:00:00 /f 
+:b1
+pause
+if %hour% EQU %m% (
+    if %hour% LSS %applications% (
+        start firefox https://www.evernote.com/client/web?login=true#?hm=true&
         CD "G:\My Drive\#Absolute pvt ltd\EVE"
-        push.bat                           
     ) ELSE (
-        goto ok4
+        goto k2
     )
 ) ELSE (
-    goto ok4
+    goto k2
 )
+:k2
 
-:ok4
 if %hour% GEQ %c% (
-    if %hour% LSS %d% (
-
+    if %hour% GEQ 00 (
         CD "G:\My Drive\#Absolute pvt ltd\EVE"
+        push.bat  
         exit
     ) ELSE (
-        goto ok5
+        goto f3
     )
 ) ELSE (
-    goto ok5
+    goto f3
 )
 
-:ok5
+:f3
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
-
-        CD "G:\My Drive\#Absolute pvt ltd\EVE"
+	notepad
+        CD "G:\My Drive\#Absolute pvt ltd\EVE"  
         push.bat
         exit
     ) ELSE (
-        goto ok6
+        goto y4
     )
 ) ELSE (
-    goto ok6
+    goto y4
 )
 
-:ok6
+:b4
 if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
 
-        CD "G:\My Drive\#Absolute pvt ltd\EVE"
+        CD "G:\My Drive\#Absolute pvt ltd\EVE"  
         push.bat
-        pause
         exit
     ) ELSE (
-        goto done
+        goto u5
     )
 ) ELSE ( 
     push.bat
-    goto done
+    goto u5
 )
-:done
+:u5
 exit
