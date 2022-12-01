@@ -57,8 +57,8 @@ if %hour% EQU %d% (
 
         timeout /t 3
         taskkill /f /fi "STATUS eq running"       
-        cd ..
-        push 
+        CD "G:\My Drive\#Absolute pvt ltd\EVE"
+        push.bat
     ) else (
         goto ok3
     )
@@ -71,7 +71,9 @@ if %hour% EQU %m% (
 
         start firefox https://www.blogger.com/blog/posts/273122595862652461
         schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st 0%d%:00:00 /f 
-        schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st %d%:00:00 /f                              
+        schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st %d%:00:00 /f 
+        CD "G:\My Drive\#Absolute pvt ltd\EVE"
+        push.bat                           
     ) ELSE (
         goto ok4
     )
@@ -83,7 +85,7 @@ if %hour% EQU %m% (
 if %hour% GEQ %c% (
     if %hour% LSS %d% (
 
-        push
+        CD "G:\My Drive\#Absolute pvt ltd\EVE"
         exit
     ) ELSE (
         goto ok5
@@ -96,7 +98,8 @@ if %hour% GEQ %c% (
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
 
-        push
+        CD "G:\My Drive\#Absolute pvt ltd\EVE"
+        push.bat
         exit
     ) ELSE (
         goto ok6
@@ -108,14 +111,16 @@ if %hour% GEQ %b% (
 :ok6
 if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
-        notepad
-        push
+
+        CD "G:\My Drive\#Absolute pvt ltd\EVE"
+        push.bat
+        pause
         exit
     ) ELSE (
         goto done
     )
 ) ELSE ( 
-    push.bat
+    push.bat.bat
     goto done
 )
 :done
