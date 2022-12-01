@@ -1,6 +1,6 @@
 @ECHO ON
 if not DEFINED IS_MINIMIZED set IS_MINIMIZED=1 && start "BO darbi" /min "%~f0" %* && exit
-cd bot
+cd "G:\My Drive\#Absolute pvt ltd\EVE\bot"
 start discord.py
 
 set hour=%time:~0,2%
@@ -38,8 +38,8 @@ schtasks /create /sc DAILY /tn s3 /tr "G:\My Drive\#Absolute pvt ltd\discord\aut
 schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st 0%c%:00:00 /f
 schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st %d%:00:00 /f
 schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st 0%d%:00:00 /f
-schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st %m%:00:00 /f
-schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st 0%m%:00:00 /f
+schtasks /create /sc DAILY /tn s5 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st %m%:00:00 /f
+schtasks /create /sc DAILY /tn s5 /tr "G:\My Drive\#Absolute pvt ltd\discord\auto.bat" /st 0%m%:00:00 /f
 
 netsh wlan show networks
 netsh wlan connect Starlink
@@ -120,7 +120,7 @@ if %hour% GEQ %applications% (
         goto done
     )
 ) ELSE ( 
-    push.bat.bat
+    push.bat
     goto done
 )
 :done

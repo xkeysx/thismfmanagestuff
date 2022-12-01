@@ -6,7 +6,7 @@ bot = commands.Bot(command_prefix="eve ", description="The description")
 @bot.event
 async def  on_ready():
     print("Eve is online!")
-    await bot.change_presence(activity=discord.Game('classical music for daddy'))
+    await bot.change_presence(activity=discord.Game('Hide and Seek'))
 
 @bot.command()
 async def ping(ctx):
@@ -18,4 +18,4 @@ async def on_message(message):
         await message.channel.send('<3')
 
 
-bot.run('MTAzODY4NDIzNTA5NzE5ODU5Mg.GsNQ9F.X3oDniz4suaIG9EM9barOjr5D3Pe1D-2uk9Hnk')
+bot.run("MTA0MzUyMDQ5NzIzMDU0OTA3Mg.GG65E-.5h6GheJXT7bJJx9N3XW-U4Rce3qxa3qkTa0Yeg")
