@@ -119,13 +119,4 @@ if %hour% GEQ %applications% (
 )
 :b4
 
-if %hour% EQU %m% (
-    start firefox https://www.evernote.com/client/web?login=true#?hm=true&
-    CD "G:\My Drive\#Absolute pvt ltd\EVE"
-    push.bat
-) else (
-    goto go
-)
-:go
-
 exit
