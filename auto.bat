@@ -32,7 +32,7 @@ if %rtfms% geq %d% (
     set /a m=%d%-%rtfms%
 ) 
 
-echo "applications = "%applications% ◙"b = "%b% ◙"c = "%c% ◙"d = "%d% ◙"rtfms = "%rtfms% ◙"m = "%m% > current.txt
+echo "applications = "%applications% ,"b = "%b% ,"c = "%c% ,"d = "%d% ,"rtfms = "%rtfms% ,"m = "%m% > current.txt
 
 schtasks /delete /tn s1 /f
 schtasks /delete /tn s2 /f
