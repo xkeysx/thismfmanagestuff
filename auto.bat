@@ -38,16 +38,16 @@ schtasks /delete /tn s1 /f
 schtasks /delete /tn s2 /f
 schtasks /delete /tn s3 /f
 schtasks /delete /tn s4 /f
-schtasks /create /sc DAILY /tn s1 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st %applications%:00:00 /f
-schtasks /create /sc DAILY /tn s1 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st 0%applications%:00:00 /f  
-schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st %b%:00:00 /f
-schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st 0%b%:00:00 /f 
-schtasks /create /sc DAILY /tn s3 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st %c%:00:00 /f
-schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st 0%c%:00:00 /f
-schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st %d%:00:00 /f
-schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st 0%d%:00:00 /f
-schtasks /create /sc DAILY /tn s5 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st %m%:00:00 /f
-schtasks /create /sc DAILY /tn s5 /tr "G:\My Drive\#Absolute pvt ltd\EVE\auto.bat" /st 0%m%:00:00 /f
+schtasks /create /sc DAILY /tn s1 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st %applications%:00:00 /f
+schtasks /create /sc DAILY /tn s1 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st 0%applications%:00:00 /f  
+schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st %b%:00:00 /f
+schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st 0%b%:00:00 /f 
+schtasks /create /sc DAILY /tn s3 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st %c%:00:00 /f
+schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st 0%c%:00:00 /f
+schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st %d%:00:00 /f
+schtasks /create /sc DAILY /tn s4 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st 0%d%:00:00 /f
+schtasks /create /sc DAILY /tn s5 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st %m%:00:00 /f
+schtasks /create /sc DAILY /tn s5 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st 0%m%:00:00 /f
 
 netsh wlan show networks
 netsh wlan connect Starlink
@@ -57,7 +57,8 @@ rmdir C:\Users\Silver\AppData\Local\Temp /s /q
 
 if %hour% EQU %m% (
     explorer C:\Users\Silver\Videos\overtaken.mp4
-    nircmd sendkeypress rwin+home 
+    timeout /t 5
+    nircmd sendkeypress rwin+d
 ) else (
     goto go
 )
@@ -67,7 +68,7 @@ if %hour% EQU %d% (
     if %min% EQU 00 (
 
         taskkill /f /fi "STATUS eq running"       
-        CD "G:\My Drive\#Absolute pvt ltd\EVE"
+        CD "G:\My Drive\#Absolute pvt ltd\Eve27928372"
 	timeout /t 10        
 	shutdown /s  
         push.bat
@@ -81,9 +82,9 @@ if %hour% EQU %d% (
 
 if %hour% GEQ %c% (
     if %hour% LSS 24 (
-        cd "G:\My Drive\#Absolute pvt ltd\EVE\bot"
+        cd "G:\My Drive\#Absolute pvt ltd\Eve27928372\bot"
 	start discord.py
-        cd "G:\My Drive\#Absolute pvt ltd\EVE"
+        cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
         push.bat  
         exit
     ) ELSE (
@@ -97,7 +98,7 @@ if %hour% GEQ %c% (
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
 	
-        cd "G:\My Drive\#Absolute pvt ltd\EVE"  
+        cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
         exit
     ) ELSE (
@@ -111,7 +112,7 @@ if %hour% GEQ %b% (
 if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
 
-        cd "G:\My Drive\#Absolute pvt ltd\EVE"  
+        cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
         exit
     ) ELSE (
