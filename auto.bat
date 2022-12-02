@@ -66,7 +66,7 @@ if %hour% EQU %m% (
 
 if %hour% EQU %d% (
     if %min% EQU 00 (
-
+        timeout /t 10
         taskkill /f /fi "STATUS eq running"       
         CD "G:\My Drive\#Absolute pvt ltd\Eve27928372"
 	timeout /t 10        
