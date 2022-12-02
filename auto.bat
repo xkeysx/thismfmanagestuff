@@ -32,7 +32,7 @@ if %rtfms% geq %d% (
     set /a m=%d%-%rtfms%
 ) 
 
-echo "applications = "%applications% ,"b = "%b% ,"c = "%c% ,"d = "%d% ,"rtfms = "%rtfms% ,"m = "%m% > current.txt
+echo applications = "%applications%,"b = "%b%,"c = "%c%,"d = "%d%,"rtfms = "%rtfms%,"m = "%m% > current.txt
 
 schtasks /delete /tn s1 /f
 schtasks /delete /tn s2 /f
@@ -56,7 +56,7 @@ del C:\Users\Silver\AppData\Local\Temp /q
 rmdir C:\Users\Silver\AppData\Local\Temp /s /q 
 
 if %hour% EQU %m% (
-    echo 
+    explorer C:\Users\Silver\Videos\overtaken.mp4
 ) else (
     goto go
 )
