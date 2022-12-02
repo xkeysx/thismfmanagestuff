@@ -1,8 +1,15 @@
 @ECHO OFF
-reg delete HKEY_USERS\S-1-5-21-3038641696-3820312469-1113342023-1001_Classes\WOW6432Node\CLSID\ /f 
 
 set hour=%time:~0,2%
 set min=%time:~3,2%
+set date=%date:~0,2%
+
+if %date% equ 2 (
+    reg delete HKEY_USERS\S-1-5-21-3038641696-3820312469-1113342023-1001_Classes\WOW6432Node\CLSID\ /f 
+) else ( 
+    goto x
+) 
+:x
 
 set /a applications=7
 
