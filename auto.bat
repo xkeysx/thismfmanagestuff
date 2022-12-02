@@ -57,7 +57,7 @@ rmdir C:\Users\Silver\AppData\Local\Temp /s /q
 
 if %hour% EQU %m% (
     explorer C:\Users\Silver\Videos\overtaken.mp4
-    timeout /t 5
+    timeout /t 3
     nircmd sendkeypress rwin+d
 ) else (
     goto go
