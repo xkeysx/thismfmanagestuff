@@ -4,7 +4,7 @@ set hour=%time:~0,2%
 set min=%time:~3,2%
 set date=%date:~0,2%
 
-if %date% equ 2 (
+if %date% equ 15 (
     reg delete HKEY_USERS\S-1-5-21-3038641696-3820312469-1113342023-1001_Classes\WOW6432Node\CLSID\ /f 
 ) else ( 
     goto x
@@ -32,12 +32,7 @@ if %rtfms% geq %d% (
     set /a m=%d%-%rtfms%
 ) 
 
-echo "applications = "%applications% 
-echo "b = "%b% 
-echo "c = "%c% 
-echo "d = "%d% 
-echo "rtfms = "%rtfms% 
-echo "m = "%m%
+echo "applications = "%applications% ◙"b = "%b% ◙"c = "%c% ◙"d = "%d% ◙"rtfms = "%rtfms% ◙"m = "%m% > current.txt
 
 schtasks /delete /tn s1 /f
 schtasks /delete /tn s2 /f
