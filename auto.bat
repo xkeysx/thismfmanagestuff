@@ -70,20 +70,7 @@ if %hour% EQU %d% (
 )
 
 :b1
-if %hour% EQU %b% (
-    if %min% EQU 00 (
-        start firefox https://www.evernote.com/client/web?login=true#?hm=true&
-        CD "G:\My Drive\#Absolute pvt ltd\EVE"
-        push.bat
-    ) else (
-        goto b2
-    )
-) else (
-    goto b2
-)
 
-:b2
-pause
 if %hour% GEQ %c% (
     if %hour% GEQ 00 (
         CD "G:\My Drive\#Absolute pvt ltd\EVE"
