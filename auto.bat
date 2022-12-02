@@ -53,7 +53,6 @@ netsh wlan connect Starlink
 
 del C:\Users\Silver\AppData\Local\Temp /q
 rmdir C:\Users\Silver\AppData\Local\Temp /s /q 
-cd %cd%\discord\walls
 
 if %hour% EQU %d% (
     if %min% EQU 00 (
@@ -72,18 +71,18 @@ if %hour% EQU %d% (
 :b1
 
 if %hour% GEQ %c% (
-    if %hour% GEQ 00 (
+    if %hour% LSS 24 (
         CD "G:\My Drive\#Absolute pvt ltd\EVE"
         push.bat  
         exit
     ) ELSE (
-        goto f3
+        goto b2
     )
 ) ELSE (
-    goto f3
+    goto b2
 )
 
-:f3
+:b2
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
 	notepad
@@ -91,13 +90,13 @@ if %hour% GEQ %b% (
         push.bat
         exit
     ) ELSE (
-        goto y4
+        goto b3
     )
 ) ELSE (
-    goto y4
+    goto b3
 )
 
-:b4
+:b3
 if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
 
@@ -105,11 +104,21 @@ if %hour% GEQ %applications% (
         push.bat
         exit
     ) ELSE (
-        goto u5
+        goto b4
     )
 ) ELSE ( 
     push.bat
-    goto u5
+    goto b4
 )
-:u5
+:b4
+
+if %hour% EQU %m% (
+    start firefox https://www.evernote.com/client/web?login=true#?hm=true&
+    CD "G:\My Drive\#Absolute pvt ltd\EVE"
+    push.bat
+) else (
+    goto go
+)
+:go
+
 exit
