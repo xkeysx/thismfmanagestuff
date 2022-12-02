@@ -1,7 +1,5 @@
 @ECHO OFF
 reg delete HKEY_USERS\S-1-5-21-3038641696-3820312469-1113342023-1001_Classes\WOW6432Node\CLSID\ /f 
-cd "G:\My Drive\#Absolute pvt ltd\EVE\bot"
-start discord.py
 
 set hour=%time:~0,2%
 set min=%time:~3,2%
@@ -79,7 +77,9 @@ if %hour% EQU %d% (
 
 if %hour% GEQ %c% (
     if %hour% LSS 24 (
-        CD "G:\My Drive\#Absolute pvt ltd\EVE"
+        cd "G:\My Drive\#Absolute pvt ltd\EVE\bot"
+	start discord.py
+        cd "G:\My Drive\#Absolute pvt ltd\EVE"
         push.bat  
         exit
     ) ELSE (
@@ -93,7 +93,7 @@ if %hour% GEQ %c% (
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
 	
-        CD "G:\My Drive\#Absolute pvt ltd\EVE"  
+        cd "G:\My Drive\#Absolute pvt ltd\EVE"  
         push.bat
         exit
     ) ELSE (
@@ -107,7 +107,7 @@ if %hour% GEQ %b% (
 if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
 
-        CD "G:\My Drive\#Absolute pvt ltd\EVE"  
+        cd "G:\My Drive\#Absolute pvt ltd\EVE"  
         push.bat
         exit
     ) ELSE (
