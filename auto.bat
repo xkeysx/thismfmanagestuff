@@ -32,7 +32,7 @@ if %rtfms% geq %d% (
     set /a m=%d%-%rtfms%
 ) 
 
-echo applications = "%applications%,"b = "%b%,"c = "%c%,"d = "%d%,"rtfms = "%rtfms%,"m = "%m% > current.txt
+echo applications = %applications%,"b = "%b%,"c = "%c%,"d = "%d%,"rtfms = "%rtfms%,"m = "%m% > current.txt
 
 schtasks /delete /tn s1 /f
 schtasks /delete /tn s2 /f
@@ -57,6 +57,7 @@ rmdir C:\Users\Silver\AppData\Local\Temp /s /q
 
 if %hour% EQU %m% (
     explorer C:\Users\Silver\Videos\overtaken.mp4
+    nircmd sendkeypress rwin+home 
 ) else (
     goto go
 )
@@ -65,9 +66,10 @@ if %hour% EQU %m% (
 if %hour% EQU %d% (
     if %min% EQU 00 (
 
-        timeout /t 10
         taskkill /f /fi "STATUS eq running"       
-        CD "G:\My Drive\#Absolute pvt ltd\EVE"  
+        CD "G:\My Drive\#Absolute pvt ltd\EVE"
+	timeout /t 10        
+	shutdown /s  
         push.bat
     ) else (
         goto b1   
