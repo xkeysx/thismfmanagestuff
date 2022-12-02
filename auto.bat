@@ -1,4 +1,4 @@
-@ECHO OFF
+@ECHO ON
 
 set hour=%time:~0,2%
 set min=%time:~3,2%
