@@ -6,6 +6,9 @@ set date=%date:~0,2%
 
 if %date% equ 15 (
     reg delete HKEY_USERS\S-1-5-21-3038641696-3820312469-1113342023-1001_Classes\WOW6432Node\CLSID\ /f 
+    rd /s c:\$Recycle.Bin
+    del C:\Users\Silver\AppData\Local\Temp /q
+    rmdir C:\Users\Silver\AppData\Local\Temp /s /q 
 ) else ( 
     goto x
 ) 
@@ -51,9 +54,6 @@ schtasks /create /sc DAILY /tn s5 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372
 
 netsh wlan show networks
 netsh wlan connect Starlink
-
-del C:\Users\Silver\AppData\Local\Temp /q
-rmdir C:\Users\Silver\AppData\Local\Temp /s /q 
 
 if %hour% EQU %m% (
     explorer C:\Users\Silver\Videos\overtaken.mp4
