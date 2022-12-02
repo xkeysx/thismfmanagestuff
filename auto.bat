@@ -20,6 +20,7 @@ if %d% geq 24 (
     goto ok
 ) 
 :ok
+
 if %rtfms% geq %d% (
     set /a m=%d%+24-%rtfms%
 ) else ( 
@@ -54,6 +55,13 @@ netsh wlan connect Starlink
 del C:\Users\Silver\AppData\Local\Temp /q
 rmdir C:\Users\Silver\AppData\Local\Temp /s /q 
 
+if %hour% EQU %m% (
+    echo 
+) else (
+    goto go
+)
+:go
+
 if %hour% EQU %d% (
     if %min% EQU 00 (
 
@@ -67,7 +75,6 @@ if %hour% EQU %d% (
 ) else (
     goto b1    
 )
-
 :b1
 
 if %hour% GEQ %c% (
@@ -81,11 +88,11 @@ if %hour% GEQ %c% (
 ) ELSE (
     goto b2
 )
-
 :b2
+
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
-	notepad
+	
         CD "G:\My Drive\#Absolute pvt ltd\EVE"  
         push.bat
         exit
@@ -95,8 +102,8 @@ if %hour% GEQ %b% (
 ) ELSE (
     goto b3
 )
-
 :b3
+
 if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
 
