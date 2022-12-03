@@ -21,7 +21,7 @@ set /a b=%applications%+6
 set /a c=%b%+6
 set /a d=%c%+6
 
-set /a rtfms=8
+set /a rtfms=6
 
 if %d% geq 24 (
     set /a "d=%d%-24"
