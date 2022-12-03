@@ -72,7 +72,7 @@ if %hour% EQU %d% (
         explorer "C:\Users\Silver\Videos\Illenium - Fortress (feat. Joni Fatora).mp4"
         timeout /t 2
         nircmd sendkeypress rwin+d
-        timeout /t 10
+        timeout /t 300
         taskkill /f /fi "STATUS eq running"       
         CD "G:\My Drive\#Absolute pvt ltd\Eve27928372"
 	timeout /t 10        
