@@ -57,7 +57,7 @@ netsh wlan connect Starlink
 
 if %hour% EQU %m% (
     ECHO {
-    explorer C:\Users\Silver\Videos\overtaken.mp4
+    explorer "C:\Users\Silver\Videos\Sia Unstoppable (slowed).mp4"
     timeout /t 2
     nircmd sendkeypress rwin+d
     ECHO }
@@ -69,6 +69,9 @@ if %hour% EQU %m% (
 if %hour% EQU %d% (
     if %min% EQU 00 (
 	ECHO {
+        explorer "C:\Users\Silver\Videos\Illenium - Fortress (feat. Joni Fatora).mp4"
+        timeout /t 2
+        nircmd sendkeypress rwin+d
         timeout /t 10
         taskkill /f /fi "STATUS eq running"       
         CD "G:\My Drive\#Absolute pvt ltd\Eve27928372"
@@ -105,10 +108,10 @@ if %hour% GEQ %c% (
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
 	ECHO {
-	explorer C:\Users\Silver\Videos\cantina.mp4
+	explorer "C:\Users\Silver\Videos\Imagine Dragons - Whatever it Takes - [Slowed+Reverb].mp4"
     	timeout /t 2
     	nircmd sendkeypress rwin+d
-    	timeout /t 180
+    	timeout /t 300
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
         ECHO }
@@ -124,6 +127,9 @@ if %hour% GEQ %b% (
 if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
 	ECHO {
+        explorer "Far Cry 6 - Cinematic Trailer Theme Song (Extended).mp4"
+    	timeout /t 2
+    	nircmd sendkeypress rwin+d
         explorer "G:\My Drive\#Absolute pvt ltd\Exercises"
         nircmd sendkeypress rwin+down
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
