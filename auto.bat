@@ -106,6 +106,7 @@ if %hour% GEQ %b% (
     if %hour% LSS %c% (
 	ECHO {
 	explorer C:\Users\Silver\Videos\cantina.mp4
+    	timeout /t 2
     	nircmd sendkeypress rwin+d
     	timeout /t 180
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
