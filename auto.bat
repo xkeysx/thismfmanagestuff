@@ -1,4 +1,5 @@
 @ECHO ON
+ECHO THIS CODE IS THE VOICE OF MY CORE, DEEP INSIDE...
 
 set hour=%time:~0,2%
 set min=%time:~3,2%
@@ -60,6 +61,7 @@ if %hour% EQU %m% (
     explorer "C:\Users\Silver\Videos\Sia Unstoppable (slowed).mp4"
     timeout /t 2
     nircmd sendkeypress rwin+d
+    exit
     ECHO }
 ) else (
     goto go
@@ -95,6 +97,7 @@ if %hour% GEQ %c% (
 	start discord.py
         explorer "C:\Users\Silver\Videos\Skrillex - The Reason ( Slowed + Reverb ).mp4"
         timeout /t /2
+        nircmd sendkeypress rwin+d
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
         push.bat  
 	ECHO }
