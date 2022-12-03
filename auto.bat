@@ -96,7 +96,7 @@ if %hour% GEQ %c% (
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372\bot"
 	start discord.py
         explorer "C:\Users\Silver\Videos\Illenium - Fortress (feat. Joni Fatora).mp4"
-        timeout /t /2
+        timeout /t 3
         nircmd sendkeypress rwin+d
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
         push.bat  
