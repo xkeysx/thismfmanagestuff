@@ -56,9 +56,11 @@ netsh wlan show networks
 netsh wlan connect Starlink
 
 if %hour% EQU %m% (
+    ECHO {
     explorer C:\Users\Silver\Videos\overtaken.mp4
     timeout /t 2
     nircmd sendkeypress rwin+d
+    ECHO }
 ) else (
     goto go
 )
@@ -66,12 +68,15 @@ if %hour% EQU %m% (
 
 if %hour% EQU %d% (
     if %min% EQU 00 (
+	ECHO {
         timeout /t 10
         taskkill /f /fi "STATUS eq running"       
         CD "G:\My Drive\#Absolute pvt ltd\Eve27928372"
 	timeout /t 10        
 	shutdown /s  
         push.bat
+	ECHO }
+        exit
     ) else (
         goto b1   
     )
@@ -82,10 +87,12 @@ if %hour% EQU %d% (
 
 if %hour% GEQ %c% (
     if %hour% LSS 24 (
+	ECHO {
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372\bot"
 	start discord.py
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
         push.bat  
+	ECHO }
         exit
     ) ELSE (
         goto b2
@@ -97,9 +104,13 @@ if %hour% GEQ %c% (
 
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
-	
+	ECHO {
+	explorer C:\Users\Silver\Videos\cantina.mp4
+    	nircmd sendkeypress rwin+d
+    	timeout /t 180
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
+        ECHO }
         exit
     ) ELSE (
         goto b3
@@ -111,9 +122,12 @@ if %hour% GEQ %b% (
 
 if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
-
+	ECHO {
+        explorer "G:\My Drive\#Absolute pvt ltd\Exercises"
+        nircmd sendkeypress rwin+down
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
+	ECHO }
         exit
     ) ELSE (
         goto b4
