@@ -98,7 +98,6 @@ if %hour% GEQ %c% (
         explorer "C:\Users\Silver\Videos\Illenium - Fortress (feat. Joni Fatora).mp4"
         timeout /t 2
         nircmd sendkeypress rwin+m
-        nircmd sendkeypress rwin+m
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
         push.bat  
 	ECHO }
@@ -117,7 +116,6 @@ if %hour% GEQ %b% (
 	explorer "C:\Users\Silver\Videos\Imagine Dragons - Whatever it Takes - [Slowed+Reverb].mp4"
     	timeout /t 2
     	nircmd sendkeypress rwin+m
-        nircmd sendkeypress rwin+m
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
         ECHO }
@@ -136,7 +134,6 @@ if %hour% GEQ %applications% (
         explorer "C:\Users\Silver\Videos\DJ Snake - Butterfly Effect.mp4"
     	timeout /t 2
     	nircmd sendkeypress rwin+m
-        nircmd sendkeypress rwin+m
         explorer "G:\My Drive\#Absolute pvt ltd\Exercises"
         nircmd sendkeypress rwin+mown
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
