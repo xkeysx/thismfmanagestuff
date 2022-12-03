@@ -72,7 +72,7 @@ if %hour% EQU %d% (
         explorer "C:\Users\Silver\Videos\Illenium - Fortress (feat. Joni Fatora).mp4"
         timeout /t 2
         nircmd sendkeypress rwin+d
-        timeout /t 300
+        timeout /t 360
         taskkill /f /fi "STATUS eq running"       
         CD "G:\My Drive\#Absolute pvt ltd\Eve27928372"
 	timeout /t 10        
@@ -93,6 +93,8 @@ if %hour% GEQ %c% (
 	ECHO {
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372\bot"
 	start discord.py
+        explorer "C:\Users\Silver\Videos\Skrillex - The Reason ( Slowed + Reverb ).mp4"
+        timeout /t /2
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
         push.bat  
 	ECHO }
@@ -111,7 +113,6 @@ if %hour% GEQ %b% (
 	explorer "C:\Users\Silver\Videos\Imagine Dragons - Whatever it Takes - [Slowed+Reverb].mp4"
     	timeout /t 2
     	nircmd sendkeypress rwin+d
-    	timeout /t 300
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
         ECHO }
