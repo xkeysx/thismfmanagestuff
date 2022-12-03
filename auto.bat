@@ -61,7 +61,6 @@ if %hour% EQU %m% (
     explorer "C:\Users\Silver\Videos\Guardians of the Galaxy - Come and get your love - dance scene [HQ].mp4"
     timeout /t 3
     nircmd sendkeypress rwin+d
-    nircmd sendkeypress rwin+down
     exit
     ECHO }
 ) else (
@@ -75,7 +74,6 @@ if %hour% EQU %d% (
         explorer "C:\Users\Silver\Videos\ILLENIUM ft. Joni Fatora - Fortress + Fortress (Just A Gent Remix) EDC Las Vegas.mp4"
         timeout /t 3
         nircmd sendkeypress rwin+d
-        nircmd sendkeypress rwin+down
         timeout /t 360
         taskkill /f /fi "STATUS eq running"       
         CD "G:\My Drive\#Absolute pvt ltd\Eve27928372"
@@ -100,7 +98,6 @@ if %hour% GEQ %c% (
         explorer "C:\Users\Silver\Videos\Illenium - Fortress (feat. Joni Fatora).mp4"
         timeout /t 3
         nircmd sendkeypress rwin+d
-        nircmd sendkeypress rwin+down
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
         push.bat  
 	ECHO }
@@ -119,7 +116,6 @@ if %hour% GEQ %b% (
 	explorer "C:\Users\Silver\Videos\Imagine Dragons - Whatever it Takes - [Slowed+Reverb].mp4"
     	timeout /t 3
     	nircmd sendkeypress rwin+d
-        nircmd sendkeypress rwin+down
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
         ECHO }
