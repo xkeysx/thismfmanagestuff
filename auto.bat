@@ -71,7 +71,7 @@ if %hour% EQU %m% (
 if %hour% EQU %d% (
     if %min% EQU 00 (
 	ECHO {
-        explorer "C:\Users\Silver\Videos\Illenium - Fortress (feat. Joni Fatora).mp4"
+        explorer "C:\Users\Silver\Videos\ILLENIUM ft. Joni Fatora - Fortress + Fortress (Just A Gent Remix) EDC Las Vegas.mp4"
         timeout /t 2
         nircmd sendkeypress rwin+d
         timeout /t 360
@@ -95,7 +95,7 @@ if %hour% GEQ %c% (
 	ECHO {
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372\bot"
 	start discord.py
-        explorer "C:\Users\Silver\Videos\Skrillex - The Reason ( Slowed + Reverb ).mp4"
+        explorer "C:\Users\Silver\Videos\Illenium - Fortress (feat. Joni Fatora).mp4"
         timeout /t /2
         nircmd sendkeypress rwin+d
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
