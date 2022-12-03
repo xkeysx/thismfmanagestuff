@@ -59,7 +59,7 @@ netsh wlan connect Starlink
 if %hour% EQU %m% (
     ECHO {
     explorer "C:\Users\Silver\Videos\Guardians of the Galaxy - Come and get your love - dance scene [HQ].mp4"
-    timeout /t 3
+    timeout /t 2
     nircmd sendkeypress rwin+m
     exit
     ECHO }
@@ -72,9 +72,9 @@ if %hour% EQU %d% (
     if %min% EQU 00 (
 	ECHO {
         explorer "C:\Users\Silver\Videos\ILLENIUM ft. Joni Fatora - Fortress + Fortress (Just A Gent Remix) EDC Las Vegas.mp4"
-        timeout /t 3
+        timeout /t 2
         nircmd sendkeypress rwin+m
-        timeout /t 360
+        timeout /t 260
         taskkill /f /fi "STATUS eq running"       
         CD "G:\My Drive\#Absolute pvt ltd\Eve27928372"
 	timeout /t 10        
@@ -96,7 +96,7 @@ if %hour% GEQ %c% (
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372\bot"
 	start discord.py
         explorer "C:\Users\Silver\Videos\Illenium - Fortress (feat. Joni Fatora).mp4"
-        timeout /t 3
+        timeout /t 2
         nircmd sendkeypress rwin+m
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
         push.bat  
@@ -114,7 +114,7 @@ if %hour% GEQ %b% (
     if %hour% LSS %c% (
 	ECHO {
 	explorer "C:\Users\Silver\Videos\Imagine Dragons - Whatever it Takes - [Slowed+Reverb].mp4"
-    	timeout /t 3
+    	timeout /t 2
     	nircmd sendkeypress rwin+m
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
@@ -132,10 +132,10 @@ if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
 	ECHO {
         explorer "C:\Users\Silver\Videos\DJ Snake - Butterfly Effect.mp4"
-    	timeout /t 3
+    	timeout /t 2
     	nircmd sendkeypress rwin+m
         explorer "G:\My Drive\#Absolute pvt ltd\Exercises"
-        nircmd sendkeypress rwin+mown
+        nircmd sendkeypress rwin+mown
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
 	ECHO }
