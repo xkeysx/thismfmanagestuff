@@ -58,7 +58,7 @@ netsh wlan connect Starlink
 
 if %hour% EQU %m% (
     ECHO {
-    explorer "C:\Users\Silver\Videos\Sia Unstoppable (slowed).mp4"
+    explorer "C:\Users\Silver\Videos\Guardians of the Galaxy - Come and get your love - dance scene [HQ].mp4"
     timeout /t 3
     nircmd sendkeypress rwin+d
     exit
@@ -131,7 +131,7 @@ if %hour% GEQ %b% (
 if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
 	ECHO {
-        explorer "Far Cry 6 - Cinematic Trailer Theme Song (Extended).mp4"
+        explorer "C:\Users\Silver\Videos\DJ Snake - Butterfly Effect.mp4"
     	timeout /t 3
     	nircmd sendkeypress rwin+d
         explorer "G:\My Drive\#Absolute pvt ltd\Exercises"
