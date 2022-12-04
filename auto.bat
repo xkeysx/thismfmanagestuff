@@ -63,6 +63,7 @@ if %hour% EQU %m% (
     explorer "C:\Users\Silver\Videos\Guardians of the Galaxy - Come and get your love - dance scene [HQ].mp4"
     timeout /t 2
     nircmd sendkeypress rwin+m
+    timeout /t 2
     exit
     ECHO }
 ) else (
