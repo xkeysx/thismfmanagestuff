@@ -98,17 +98,15 @@ if %hour% EQU %d% (
 if %hour% GEQ %c% (
     if %hour% LSS 24 (
 	ECHO {
-        cd "G:\My Drive\#Absolute pvt ltd\Eve27928372\bot"
         nircmd setdefaultsounddevice "Speakers"
-        timeout /t 3
-        explorer "C:\Users\Silver\Videos\Megamind - Making an Entrance - Fandango Family_Trim.mp4"
-        timeout /t 3
-        nircmd sendkeypress rwin+m
+	explorer "C:\Users\Silver\Videos\Megamind - Making an Entrance - Fandango Family_Trim.mp4"
     	timeout /t 3
-        explorer C:\Users\Silver\AppData\Local\Discord\app-1.0.9007\Discord.exe 
+    	nircmd sendkeypress rwin+m
     	timeout /t 3
-        cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
-        push.bat  
+        explorer C:\Users\Silver\AppData\Local\Discord\app-1.0.9007\Discord.exe
+    	timeout /t 3
+        cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
+        push.bat
 	ECHO }
         exit
     ) ELSE (
