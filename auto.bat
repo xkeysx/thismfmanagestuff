@@ -57,6 +57,7 @@ netsh wlan connect Starlink
 
 if %hour% EQU %m% (
     ECHO {
+    nircmd setdefaultsounddevice "Speakers"
     explorer "C:\Users\Silver\Videos\Guardians of the Galaxy - Come and get your love - dance scene [HQ].mp4"
     timeout /t 2
     nircmd sendkeypress rwin+m
@@ -70,6 +71,7 @@ if %hour% EQU %m% (
 if %hour% EQU %d% (
     if %min% EQU 00 (
 	ECHO {
+        nircmd setdefaultsounddevice "Speakers"
         explorer "C:\Users\Silver\Music\Interstellar Main Theme Extra Extended Soundtrack By Hans Zimmer - Free Download, Borrow, and Streaming - Internet Archive.mp3"
         timeout /t 2
         nircmd sendkeypress rwin+m
@@ -94,6 +96,7 @@ if %hour% GEQ %c% (
 	ECHO {
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372\bot"
 	start discord.py
+        nircmd setdefaultsounddevice "Speakers"
         explorer "C:\Users\Silver\Video\Megamind - Making an Entrance - Fandango Family_Trim.mp4"
         timeout /t 2
         nircmd sendkeypress rwin+m
@@ -115,6 +118,7 @@ if %hour% GEQ %c% (
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
 	ECHO {
+        nircmd setdefaultsounddevice "Speakers"
 	explorer "C:\Users\Silver\Videos\Timecop1983 - On the Run.mp4"
     	timeout /t 2
     	nircmd sendkeypress rwin+m
@@ -136,6 +140,7 @@ if %hour% GEQ %b% (
 if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
 	ECHO {
+        nircmd setdefaultsounddevice "Speakers"
         explorer "C:\Users\Silver\Videos\DJ Snake - Butterfly Effect.mp4"
     	timeout /t 2
     	nircmd sendkeypress rwin+m
