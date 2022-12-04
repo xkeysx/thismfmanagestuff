@@ -20,7 +20,7 @@ set /a b=%applications%+6
 set /a c=%b%+6
 set /a d=%c%+6
 
-set /a rtfms=6
+set /a rtfms=8
 
 if %d% geq 24 (
     set /a "d=%d%-24"
@@ -97,6 +97,7 @@ if %hour% GEQ %c% (
         explorer "C:\Users\Silver\Video\Megamind - Making an Entrance - Fandango Family_Trim.mp4"
         timeout /t 2
         nircmd sendkeypress rwin+m
+        explorer C:\Users\Silver\AppData\Local\Discord\app-1.0.9007\Discord.exe 
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
         push.bat  
 	ECHO }
@@ -133,6 +134,7 @@ if %hour% GEQ %applications% (
         explorer "C:\Users\Silver\Videos\DJ Snake - Butterfly Effect.mp4"
     	timeout /t 2
     	nircmd sendkeypress rwin+m
+        start firefox https://leetcode.com/problemset/all/
         explorer "G:\My Drive\#Absolute pvt ltd\Exercises"
         nircmd sendkeypress rwin+mown
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
