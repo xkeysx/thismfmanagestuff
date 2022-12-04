@@ -15,7 +15,7 @@ if %date% equ 15 (
 ) 
 :x
 
-set /a applications=7
+set /a applications=12
 
 set /a b=%applications%+6
 set /a c=%b%+7
