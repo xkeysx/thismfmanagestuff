@@ -116,7 +116,9 @@ if %hour% GEQ %b% (
 	explorer "C:\Users\Silver\Videos\Timecop1983 - On the Run.mp4"
     	timeout /t 2
     	nircmd sendkeypress rwin+m
+    	timeout /t 2
         start firefox https://www.evernote.com/client/web?login=true
+    	timeout /t 2
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
         ECHO }
