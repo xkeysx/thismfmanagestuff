@@ -17,8 +17,8 @@ if %date% equ 15 (
 set /a applications=7
 
 set /a b=%applications%+6
-set /a c=%b%+6
-set /a d=%c%+7
+set /a c=%b%+7
+set /a d=%c%+5
 
 set /a rtfms=8
 
