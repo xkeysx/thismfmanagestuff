@@ -61,9 +61,9 @@ if %hour% EQU %m% (
     ECHO {
     nircmd setdefaultsounddevice "Speakers"
     explorer "C:\Users\Silver\Videos\Guardians of the Galaxy - Come and get your love - dance scene [HQ].mp4"
-    timeout /t 2
+    timeout /t 3
     nircmd sendkeypress rwin+m
-    timeout /t 2
+    timeout /t 3
     exit
     ECHO }
 ) else (
@@ -76,9 +76,9 @@ if %hour% EQU %d% (
 	ECHO {
         nircmd setdefaultsounddevice "Speakers"
         explorer "C:\Users\Silver\Music\Interstellar Main Theme Extra Extended Soundtrack By Hans Zimmer - Free Download, Borrow, and Streaming - Internet Archive.mp3"
-        timeout /t 2
+        timeout /t 3
         nircmd sendkeypress rwin+m
-        timeout /t 260
+        timeout /t 360
         taskkill /f /fi "STATUS eq running"       
         CD "G:\My Drive\#Absolute pvt ltd\Eve27928372"
 	timeout /t 10        
@@ -100,13 +100,13 @@ if %hour% GEQ %c% (
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372\bot"
 	start discord.py
         nircmd setdefaultsounddevice "Speakers"
-        timeout /t 2
+        timeout /t 3
         explorer "C:\Users\Silver\Videos\Megamind - Making an Entrance - Fandango Family_Trim.mp4"
-        timeout /t 2
+        timeout /t 3
         nircmd sendkeypress rwin+m
-    	timeout /t 2
+    	timeout /t 3
         explorer C:\Users\Silver\AppData\Local\Discord\app-1.0.9007\Discord.exe 
-    	timeout /t 2
+    	timeout /t 3
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
         push.bat  
 	ECHO }
@@ -124,11 +124,11 @@ if %hour% GEQ %b% (
 	ECHO {
         nircmd setdefaultsounddevice "Speakers"
 	explorer "C:\Users\Silver\Videos\Timecop1983 - On the Run.mp4"
-    	timeout /t 2
+    	timeout /t 3
     	nircmd sendkeypress rwin+m
-    	timeout /t 2
+    	timeout /t 3
         start firefox https://www.evernote.com/client/web?login=true
-    	timeout /t 2
+    	timeout /t 3
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
         ECHO }
@@ -146,11 +146,11 @@ if %hour% GEQ %applications% (
 	ECHO {
         nircmd setdefaultsounddevice "Speakers"
         explorer "C:\Users\Silver\Videos\DJ Snake - Butterfly Effect.mp4"
-    	timeout /t 2
+    	timeout /t 3
     	nircmd sendkeypress rwin+m
-    	timeout /t 2
+    	timeout /t 3
         start firefox https://leetcode.com/problemset/all/
-    	timeout /t 2
+    	timeout /t 3
         explorer "G:\My Drive\#Absolute pvt ltd\Exercises"
         nircmd sendkeypress rwin+mown
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
