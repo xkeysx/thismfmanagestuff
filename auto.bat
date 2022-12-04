@@ -1,5 +1,4 @@
 @ECHO ON
-ECHO THIS CODE IS THE VOICE OF MY CORE, DEEP INSIDE...
 
 set hour=%time:~0,2%
 set min=%time:~3,2%
@@ -71,7 +70,7 @@ if %hour% EQU %m% (
 if %hour% EQU %d% (
     if %min% EQU 00 (
 	ECHO {
-        explorer "C:\Users\Silver\Videos\ILLENIUM ft. Joni Fatora - Fortress + Fortress (Just A Gent Remix) EDC Las Vegas.mp4"
+        explorer "C:\Users\Silver\Music\Interstellar Main Theme Extra Extended Soundtrack By Hans Zimmer - Free Download, Borrow, and Streaming - Internet Archive.mp3"
         timeout /t 2
         nircmd sendkeypress rwin+m
         timeout /t 260
@@ -95,7 +94,7 @@ if %hour% GEQ %c% (
 	ECHO {
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372\bot"
 	start discord.py
-        explorer "C:\Users\Silver\Videos\Illenium - Fortress (feat. Joni Fatora).mp4"
+        explorer "C:\Users\Silver\Video\Megamind - Making an Entrance - Fandango Family_Trim.mp4"
         timeout /t 2
         nircmd sendkeypress rwin+m
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
@@ -113,7 +112,7 @@ if %hour% GEQ %c% (
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
 	ECHO {
-	explorer "C:\Users\Silver\Videos\Imagine Dragons - Whatever it Takes - [Slowed+Reverb].mp4"
+	explorer "C:\Users\Silver\Videos\Timecop1983 - On the Run.mp4"
     	timeout /t 2
     	nircmd sendkeypress rwin+m
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
