@@ -15,7 +15,7 @@ if %date% equ 15 (
 ) 
 :x
 
-set /a applications=12
+set /a applications=7
 
 set /a b=%applications%+6
 set /a c=%b%+7
@@ -99,7 +99,6 @@ if %hour% GEQ %c% (
     if %hour% LSS 24 (
 	ECHO {
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372\bot"
-	start discord.py
         nircmd setdefaultsounddevice "Speakers"
         timeout /t 3
         explorer "C:\Users\Silver\Videos\Megamind - Making an Entrance - Fandango Family_Trim.mp4"
