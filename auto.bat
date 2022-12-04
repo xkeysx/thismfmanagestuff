@@ -101,7 +101,7 @@ if %hour% GEQ %c% (
 	start discord.py
         nircmd setdefaultsounddevice "Speakers"
         timeout /t 2
-        explorer "C:\Users\Silver\Video\Megamind - Making an Entrance - Fandango Family_Trim.mp4"
+        explorer "C:\Users\Silver\Videos\Megamind - Making an Entrance - Fandango Family_Trim.mp4"
         timeout /t 2
         nircmd sendkeypress rwin+m
     	timeout /t 2
