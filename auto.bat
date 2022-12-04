@@ -41,7 +41,8 @@ schtasks /delete /tn s1 /f
 schtasks /delete /tn s2 /f
 schtasks /delete /tn s3 /f
 schtasks /delete /tn s4 /f
-schtasks /delete /rn s5 /f
+schtasks /delete /tn s5 /f
+pause
 schtasks /create /sc DAILY /tn s1 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st %applications%:00:00 /f
 schtasks /create /sc DAILY /tn s1 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st 0%applications%:00:00 /f  
 schtasks /create /sc DAILY /tn s2 /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st %b%:00:00 /f
