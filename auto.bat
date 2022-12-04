@@ -1,4 +1,5 @@
 @ECHO ON
+cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
 
 set hour=%time:~0,2%
 set min=%time:~3,2%
