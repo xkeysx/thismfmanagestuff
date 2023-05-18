@@ -5,11 +5,11 @@ set hour=%time:~0,2%
 set min=%time:~3,2%
 set date=%date:~0,2%
 
-if %date% equ 15 (
+if %date% equ 18 (
     reg delete HKEY_USERS\S-1-5-21-3038641696-3820312469-1113342023-1001_Classes\WOW6432Node\CLSID\ /f 
-    rd /s c:\$Recycle.Bin
-    del C:\Users\Silver\AppData\Local\Temp /q
-    rmdir C:\Users\Silver\AppData\Local\Temp /s /q 
+    rd /s c:\$Recycle.Bin /f
+    del C:\Users\s7887\AppData\Local\Temp /q
+    rmdir C:\Users\s7887\AppData\Local\Temp /s /q 
 ) else ( 
     goto x
 ) 
@@ -61,7 +61,7 @@ netsh wlan connect Starlink
 if %hour% EQU %m% (
     ECHO {
     nircmd setdefaultsounddevice "Speakers"
-    explorer "C:\Users\Silver\Videos\Guardians of the Galaxy - Come and get your love - dance scene [HQ].mp4"
+    explorer "C:\Users\s7887\Videos\Guardians of the Galaxy - Come and get your love - dance scene [HQ].mp4"
     timeout /t 3
     nircmd sendkeypress rwin+m
     timeout /t 3
@@ -76,7 +76,7 @@ if %hour% EQU %d% (
     if %min% EQU 00 (
 	ECHO {
         nircmd setdefaultsounddevice "Speakers"
-        explorer "C:\Users\Silver\Music\Interstellar Main Theme Extra Extended Soundtrack By Hans Zimmer - Free Download, Borrow, and Streaming - Internet Archive.mp3"
+        explorer "C:\Users\s7887\Music\Interstellar Main Theme Extra Extended Soundtrack By Hans Zimmer - Free Download, Borrow, and Streaming - Internet Archive.mp3"
         timeout /t 3
         nircmd sendkeypress rwin+m
         timeout /t 360
@@ -99,11 +99,11 @@ if %hour% GEQ %c% (
     if %hour% LSS 24 (
 	ECHO {
         nircmd setdefaultsounddevice "Speakers"
-	explorer "C:\Users\Silver\Videos\Megamind - Making an Entrance - Fandango Family_Trim.mp4"
+	explorer "C:\Users\s7887\Videos\Megamind - Making an Entrance - Fandango Family_Trim.mp4"
     	timeout /t 3
     	nircmd sendkeypress rwin+m
     	timeout /t 3
-        explorer C:\Users\Silver\AppData\Local\Discord\app-1.0.9007\Discord.exe
+        explorer C:\Users\s7887\AppData\Local\Discord\app-1.0.9007\Discord.exe
     	timeout /t 3
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
@@ -121,7 +121,7 @@ if %hour% GEQ %b% (
     if %hour% LSS %c% (
 	ECHO {
         nircmd setdefaultsounddevice "Speakers"
-	explorer "C:\Users\Silver\Videos\Timecop1983 - On the Run.mp4"
+	explorer "C:\Users\s7887\Videos\Timecop1983 - On the Run.mp4"
     	timeout /t 3
     	nircmd sendkeypress rwin+m
     	timeout /t 3
@@ -143,7 +143,7 @@ if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
 	ECHO {
         nircmd setdefaultsounddevice "Speakers"
-        explorer "C:\Users\Silver\Videos\DJ Snake - Butterfly Effect.mp4"
+        explorer "C:\Users\s7887\Videos\DJ Snake - Butterfly Effect.mp4"
     	timeout /t 3
     	nircmd sendkeypress rwin+m
     	timeout /t 3
