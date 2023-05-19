@@ -15,13 +15,13 @@ if %date% equ 18 (
 ) 
 :x
 
-set /a applications=7
+set /a applications=4
 
 set /a b=%applications%+6
-set /a c=%b%+7
-set /a d=%c%+5
+set /a c=%b%+6
+set /a d=%c%+6
 
-set /a rtfms=8
+set /a isolate=1
 
 if %d% geq 24 (
     set /a "d=%d%-24"
@@ -31,9 +31,9 @@ if %d% geq 24 (
 :ok
 
 if %rtfms% geq %d% (
-    set /a m=%d%+24-%rtfms%
+    set /a m=%d%+24-%isolate%
 ) else ( 
-    set /a m=%d%-%rtfms%
+    set /a m=%d%-%isolate%
 ) 
 
 echo applications = %applications%,"b = "%b%,"c = "%c%,"d = "%d%,"rtfms = "%rtfms%,"m = "%m% > current.txt
@@ -61,7 +61,7 @@ netsh wlan connect Starlink
 if %hour% EQU %m% (
     ECHO {
     nircmd setdefaultsounddevice "Speakers"
-    explorer "C:\Users\s7887\Videos\Guardians of the Galaxy - Come and get your love - dance scene [HQ].mp4"
+
     timeout /t 3
     nircmd sendkeypress rwin+m
     timeout /t 3
@@ -74,18 +74,18 @@ if %hour% EQU %m% (
 
 if %hour% EQU %d% (
     if %min% EQU 00 (
-	ECHO {
+	  ECHO {
         nircmd setdefaultsounddevice "Speakers"
-        explorer "C:\Users\s7887\Music\Interstellar Main Theme Extra Extended Soundtrack By Hans Zimmer - Free Download, Borrow, and Streaming - Internet Archive.mp3"
+
         timeout /t 3
         nircmd sendkeypress rwin+m
         timeout /t 360
         taskkill /f /fi "STATUS eq running"       
         CD "G:\My Drive\#Absolute pvt ltd\Eve27928372"
-	timeout /t 10        
-	shutdown /s  
+	  timeout /t 10        
+	  shutdown /s  
         push.bat
-	ECHO }
+	  ECHO }
         exit
     ) else (
         goto b1   
@@ -97,17 +97,17 @@ if %hour% EQU %d% (
 
 if %hour% GEQ %c% (
     if %hour% LSS 24 (
-	ECHO {
+ 	  ECHO {
         nircmd setdefaultsounddevice "Speakers"
-	explorer "C:\Users\s7887\Videos\Megamind - Making an Entrance - Fandango Family_Trim.mp4"
-    	timeout /t 3
-    	nircmd sendkeypress rwin+m
-    	timeout /t 3
+
+    	  timeout /t 3
+    	  nircmd sendkeypress rwin+m
+    	  timeout /t 3
         explorer C:\Users\s7887\AppData\Local\Discord\app-1.0.9007\Discord.exe
-    	timeout /t 3
+    	  timeout /t 3
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
-	ECHO }
+	  ECHO }
         exit
     ) ELSE (
         goto b2
@@ -119,14 +119,14 @@ if %hour% GEQ %c% (
 
 if %hour% GEQ %b% (
     if %hour% LSS %c% (
-	ECHO {
+	  ECHO {
         nircmd setdefaultsounddevice "Speakers"
-	explorer "C:\Users\s7887\Videos\Timecop1983 - On the Run.mp4"
-    	timeout /t 3
-    	nircmd sendkeypress rwin+m
-    	timeout /t 3
+
+     	  timeout /t 3
+    	  nircmd sendkeypress rwin+m
+    	  timeout /t 3
         start firefox https://www.evernote.com/client/web?login=true
-    	timeout /t 3
+    	  timeout /t 3
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
         ECHO }
@@ -141,19 +141,19 @@ if %hour% GEQ %b% (
 
 if %hour% GEQ %applications% (
     if %hour% LSS %b% ( 
-	ECHO {
+	  ECHO {
         nircmd setdefaultsounddevice "Speakers"
-        explorer "C:\Users\s7887\Videos\DJ Snake - Butterfly Effect.mp4"
-    	timeout /t 3
-    	nircmd sendkeypress rwin+m
-    	timeout /t 3
+
+    	  timeout /t 3
+    	  nircmd sendkeypress rwin+m
+    	  timeout /t 3
         start firefox https://leetcode.com/problemset/all/
-    	timeout /t 3
+    	  timeout /t 3
         explorer "G:\My Drive\#Absolute pvt ltd\Exercises"
         nircmd sendkeypress rwin+mown
         cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"  
         push.bat
-	ECHO }
+	  ECHO }
         exit
     ) ELSE (
         goto b4
