@@ -15,8 +15,8 @@ if %date% equ 18 (
 ) 
 :x
 
-schtasks /create /sc DAILY /tn MID /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st 0%m%:00:00 /f
-schtasks /create /sc DAILY /tn MID /tr "G:\My Drive\#Absolute pvt ltd\Eve27928372\auto.bat" /st %m%:00:00 /f
+schtasks /create /sc DAILY /tn MID /tr "C:\Users\s7887\OneDrive\Desktop\Eve27928372" /st 0%m%:00:00 /f
+schtasks /create /sc DAILY /tn MID /tr "C:\Users\s7887\OneDrive\Desktop\Eve27928372" /st %m%:00:00 /f
 
 netsh wlan show networks
 netsh wlan connect Starlink
