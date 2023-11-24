@@ -1,5 +1,5 @@
 @ECHO ON
-cd "G:\My Drive\#Absolute pvt ltd\Eve27928372"
+cd "C:\Users\s7887\OneDrive\Desktop\thismfmanagestuff"
 
 set hour=%time:~0,2%
 set min=%time:~3,2%
@@ -19,7 +19,7 @@ schtasks /create /sc DAILY /tn MID /tr "C:\Users\s7887\OneDrive\Desktop\Eve27928
 schtasks /create /sc DAILY /tn MID /tr "C:\Users\s7887\OneDrive\Desktop\Eve27928372" /st %m%:00:00 /f
 
 netsh wlan show networks
-netsh wlan connect Starlink
+netsh wlan connect Starlink2
 
 if %hour% EQU 0 (
     explorer 
